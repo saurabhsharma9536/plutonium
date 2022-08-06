@@ -1,20 +1,19 @@
 const express = require('express');
-const abc = require('../introduction/intro')
+//const abc = require('../introduction/intro')
 const router = express.Router();
-
-router.get('/test-me', function (req, res) {
-    console.log('My batch is', abc.name)
-    abc.printName()
-    res.send('My second ever api!')
-});
+const royal = require("../logger/looger")
+ const royal2 = require("../util/helper")
+ const royal3 = require("../validator/formatter")
 
 
-router.get('/test-you', function(req, res){
-    res.send('This is the second routes implementation')
+router.get("/test-me", function(req,res){
+    
+     royal.welcome()
+     royal2.printdate()
+     royal3.lowercase
+
+        res.send("this is my 1st API")
 })
 
-router.get('/give-me-students-data',function(req, res){
-
-})
 module.exports = router;
 // adding this comment for no reason
